@@ -1,0 +1,26 @@
+{
+  "name": "brain-games-first",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "prepublishOnly": "npm run build",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline"
+  },
+  "author": "mrblack_bear",
+  "license": "ISC",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
