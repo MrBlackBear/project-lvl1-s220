@@ -3,3 +3,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/8d4bff4606ab1479b3c0/maintainability)](https://codeclimate.com/github/MrBlackBear/project-lvl1-s220/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8d4bff4606ab1479b3c0/test_coverage)](https://codeclimate.com/github/MrBlackBear/project-lvl1-s220/test_coverage)
+
+[![Build Status](https://travis-ci.org/MrBlackBear/project-lvl1-s220.svg?branch=master)](https://travis-ci.org/MrBlackBear/project-lvl1-s220)
