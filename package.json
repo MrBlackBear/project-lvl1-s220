@@ -1,6 +1,6 @@
 {
   "name": "brain-games-first",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "author": "mrblack_bear",
   "license": "ISC",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
