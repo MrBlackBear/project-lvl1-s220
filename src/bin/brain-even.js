@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import sayHello1 from '../game/even';
+import point from '../game/even';
 
-sayHello1();
+point();

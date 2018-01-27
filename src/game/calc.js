@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import start from './engine';
 
 const add = (firstNumber, secondNumber) => firstNumber + secondNumber;
 
@@ -25,39 +26,28 @@ const evalOfExpression = (rAction, firstNumber, secondNumber) => {
   return multiply(firstNumber, secondNumber);
 };
 
-const assert = (eOfExpression, yourAnswer) => evalOfExpression === yourAnswer;
+const assert = (eOfExpression, yourAnswer) => eOfExpression === yourAnswer / 1;
 
 const randomBigNumber = () => 10 + Math.floor(Math.random() * 21);
 const randomNumber = () => Math.floor(Math.random() * 11);
 
-const sayHello2 = () => {
-  console.log('Welcome to the Brain Games!\nAnswer "yes" if number even otherwise answer "no".\n');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!\n`);
+const str = 'What is the result of the expression?';
 
-  let count = 0;
-  const repeatNeedTime = 3;
-  for (let i = 0; i < repeatNeedTime; i += 1) {
-    const randomFirstNumber = randomBigNumber();
-    const randomSecondNumber = randomNumber();
-    const randAction = randomAction();
-    console.log(`Question:  ${randomFirstNumber} ${randAction} ${randomSecondNumber}`);
-    const answer = readlineSync.question('Your answer: ');
-    const realAnswer = evalOfExpression(randAction, randomFirstNumber, randomSecondNumber);
-    if (assert(realAnswer, answer)) {
-      count += 1;
-      console.log('Correct!');
-    } else {
-      break;
-    }
-  }
-
-  if (count !== repeatNeedTime) {
-    console.log(`Let's try again, ${userName}!`);
+const logic = () => {
+  const randomFirstNumber = randomBigNumber();
+  const randomSecondNumber = randomNumber();
+  const randAction = randomAction();
+  console.log(`Question:  ${randomFirstNumber} ${randAction} ${randomSecondNumber}`);
+  const answer = readlineSync.question('Your answer: ');
+  const realAnswer = evalOfExpression(randAction, randomFirstNumber, randomSecondNumber);
+  if (assert(realAnswer, answer)) {
+    console.log('Correct!');
   } else {
-    console.log(`Congratulations, ${userName}!`);
+    return 0;
   }
+  return 1;
 };
 
+const point = () => start(logic, str);
 
-export default sayHello2;
+export default point;
